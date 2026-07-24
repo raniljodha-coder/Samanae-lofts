@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-body: "Karla", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-papel text-tinta font-sans;
+  }
+  ::selection {
+    @apply bg-flor text-papel;
+  }
+  :focus-visible {
+    outline: 2px solid theme("colors.flor");
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Eyebrow label — the small surveyed-drawing caption used across sections */
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.22em];
+  }
+
+  .shell {
+    @apply mx-auto w-full max-w-shell px-6 sm:px-8;
+  }
+
+  /* Display headings: tight, high-contrast serif */
+  .h-xl {
+    @apply font-display font-normal leading-[0.94] tracking-[-0.015em]
+           text-[clamp(2.9rem,8.5vw,6.5rem)];
+  }
+  .h-lg {
+    @apply font-display font-normal leading-[1.02] tracking-[-0.01em]
+           text-[clamp(2.1rem,5vw,3.6rem)];
+  }
+  .h-md {
+    @apply font-display font-normal leading-[1.1]
+           text-[clamp(1.5rem,2.6vw,2.1rem)];
+  }
+
+  .lede {
+    @apply text-[1.05rem] sm:text-[1.15rem] leading-[1.7];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full
+           px-6 py-3 font-mono text-[11px] uppercase tracking-[0.18em]
+           transition-colors duration-200;
+  }
+  .btn-flor {
+    @apply btn bg-flor text-papel hover:bg-florLt;
+  }
+  .btn-line {
+    @apply btn border border-current hover:bg-current;
+  }
+
+  /* Hairline rule used as a section divider */
+  .rule {
+    @apply h-px w-full bg-current opacity-15;
+  }
+
+  .prose-note :where(p) {
+    @apply mb-4 leading-[1.75];
+  }
+  .prose-note :where(strong) {
+    @apply font-semibold;
+  }
+  .prose-note :where(code) {
+    @apply font-mono text-[0.85em] bg-arena px-1.5 py-0.5 rounded;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+.rise {
+  animation: riseIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Editor placeholder notes — visible on the page so they can't ship by accident */
+.prose-note :where(blockquote) {
+  @apply my-5 rounded-md border-l-[3px] border-flor bg-flor/10 px-5 py-4
+         text-[0.9rem] leading-[1.65] text-tinta/75;
+}
+.prose-note :where(blockquote p:last-child) {
+  @apply mb-0;
+}
