@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import SitePlan from "../components/SitePlan";
-import { getSite, getLots, lotSummary, getJourney } from "../lib/content";
+import { getSite, getLots, lotSummary } from "../lib/content";
+import { timeline } from "../lib/journey";
 
 export default async function Home() {
   const site = getSite();
   const lots = getLots();
   const { available } = lotSummary(lots);
-  const journey = await getJourney();
-  const built = journey.filter((e) => !e.upcoming);
+  const built = timeline.filter((e) => !e.upcoming && e.image);
 
   return (
     <>
@@ -203,7 +203,7 @@ export default async function Home() {
           </h2>
           <div className="mt-14 grid gap-8 sm:grid-cols-3">
             {built.slice(-3).map((e) => (
-              <Link key={e.slug} href="/journey" className="group block">
+              <Link key={e.title} href="/journey" className="group block">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg bg-arena">
                   {e.image ? (
                     <Image
