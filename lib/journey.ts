@@ -84,6 +84,28 @@ export const timeline: JourneyStage[] = [
     ],
   },
   {
+    date: "Render and glazing",
+    title: "Walls closed, glass in",
+    image: "/images/construction-01.jpg",
+    imageAlt:
+      "The loft rendered white with black-framed sliding glass installed across the front and the steel pergola complete",
+    body: [
+      "Rendered, painted and glazed. The sliding walls of glass are in, the pergola is finished over the terrace, and the concrete shell now reads as a house.",
+      "From outside, the deep terrace and the wall of glass do exactly what they were drawn to do — pull the jungle straight into the living space.",
+    ],
+  },
+  {
+    date: "Nearly there",
+    title: "The first loft, almost done",
+    image: "/images/construction-02.jpg",
+    imageAlt:
+      "The near-finished Samanea loft seen from the front, white render, full-width covered terrace and glazing complete",
+    body: [
+      "The first loft as it stands today — structurally complete, closed in, and down to the finishing work inside. This is the house guests will actually stay in.",
+      "Interiors, furniture and landscaping are the last steps before opening.",
+    ],
+  },
+  {
     date: "January 2027",
     title: "Opening",
     image: "",
