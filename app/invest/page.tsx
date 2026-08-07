@@ -68,7 +68,7 @@ export default function Invest() {
             <table className="w-full min-w-[560px] border-collapse text-left">
               <thead>
                 <tr className="border-b border-tinta/20">
-                  {["Lot", "Plot", "Built area", "Status"].map((h) => (
+                  {["Lot", "Plot", "Parcel", "Status"].map((h) => (
                     <th
                       key={h}
                       scope="col"
@@ -94,7 +94,7 @@ export default function Invest() {
                       {l.terrain.toLocaleString("en-US", { minimumFractionDigits: 2 })} m²
                     </td>
                     <td className="py-4 font-mono text-sm tabular-nums">
-                      {l.villa.toLocaleString("en-US", { minimumFractionDigits: 2 })} m²
+                      …3184_1_{l.id}
                     </td>
                     <td className="py-4">
                       <span
@@ -112,8 +112,8 @@ export default function Invest() {
           </div>
 
           <p className="mt-6 text-sm text-tinta/55">
-            Figures are taken from the registered lotification survey. Prices on
-            request.
+            Plot areas and parcel numbers are from the registered survey (mensura
+            12023053184). Prices on request.
           </p>
         </div>
       </section>
