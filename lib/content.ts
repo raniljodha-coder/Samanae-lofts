@@ -21,7 +21,7 @@ export type LotStatus = "available" | "reserved" | "sold";
 export type Lot = {
   id: number;
   terrain: number;
-  villa: number;
+  villa?: number;
   status: LotStatus;
   price?: string;
 };
