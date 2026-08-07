@@ -112,7 +112,7 @@ export const timeline: JourneyStage[] = [
     imageAlt: "",
     upcoming: true,
     body: [
-      "Finished, furnished, and taking guests. Two lots are still available to build on before then.",
+      "Finished, furnished, and taking guests. Four lots are still available to build on before then.",
     ],
   },
 ];
