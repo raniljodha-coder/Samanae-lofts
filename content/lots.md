@@ -1,57 +1,46 @@
 ---
 # ─────────────────────────────────────────────────────────────
 #  LOTS — Samanea Loft Barbacoa II
-#  status must be one of: available | reserved | sold
-#  ⚠️ TODO: I set these from what you told me (2 available, 1 nearly
-#  sold) but I don't know WHICH lot numbers. Correct them here.
-#  Prices are placeholders — set them or leave price blank to hide.
+#  Areas from the registered survey (mensura 12023053184_1_1 … _1_11).
+#  status: available | reserved | sold
+#  price: optional — leave "" to show "on request"
 # ─────────────────────────────────────────────────────────────
 lots:
   - id: 1
-    terrain: 700.18
-    villa: 102.86
+    terrain: 1300.07
     status: sold
   - id: 2
-    terrain: 385.28
-    villa: 102.86
+    terrain: 677.86
     status: sold
   - id: 3
-    terrain: 1393.35
-    villa: 102.86
+    terrain: 176.72
     status: sold
   - id: 4
-    terrain: 700.16
-    villa: 102.86
+    terrain: 485.28
     status: sold
   - id: 5
-    terrain: 1344.41
-    villa: 296.92
+    terrain: 539.09
     status: sold
   - id: 6
-    terrain: 980.64
-    villa: 102.86
+    terrain: 532.42
     status: sold
   - id: 7
-    terrain: 700.05
-    villa: 102.86
+    terrain: 682.65
     status: sold
   - id: 8
-    terrain: 700.09
-    villa: 102.86
-    status: reserved
+    terrain: 512.35
+    status: available
     price: ""
   - id: 9
-    terrain: 624.68
-    villa: 102.86
+    terrain: 515.88
     status: available
     price: ""
   - id: 10
-    terrain: 624.70
-    villa: 102.86
+    terrain: 908.26
     status: available
     price: ""
   - id: 11
-    terrain: 202.86
-    villa: 41.07
-    status: sold
+    terrain: 1453.03
+    status: available
+    price: ""
 ---
