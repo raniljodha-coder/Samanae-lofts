@@ -16,7 +16,7 @@ const specs = [
   { k: "Terrace", v: "Full width", n: "Covered by a steel pergola" },
   { k: "Structure", v: "Poured concrete", n: "Built for the Caribbean, not for a season" },
   { k: "Glazing", v: "Sliding walls", n: "Terrace reads as another room" },
-  { k: "Plot sizes", v: "203 – 1,344 m²", n: "Varies by lot" },
+  { k: "Plot sizes", v: "177 – 1,453 m²", n: "Varies by lot" },
 ];
 
 const qualities = [
